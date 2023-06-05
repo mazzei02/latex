@@ -1,0 +1,440 @@
+\begin{parchment}[¿Puede un escalar no ser un número?] {
+\noindent 1) A.B.C.D.E.F.G.H.I.J.K.L.M.N.P.Q.R.S. T.U.V.W.Y.Z\\
+2) AA, B; AAA, C; AAAA, D; AAAAA, E; AAAAAA, F; AAAAAAA, G; AAAAAAAA, H; AAAAAAAAA, I; AAAAAAAAA, J;\\
+3) AKALB; AKAKALC; AKAKAKALD; AKALB; BKALC; CKALD; DKALE; BKELG; GLEKB; FKDLJ; JLFKD.\\
+4) CMALB; DMALC; IMGLB.\\
+5) CKNLC; HKNLH; DMDLN; EMELN.\\
+6) JLAN;JKALAA;JKBLAB; AAKALAB; JKJLBN; JKJKJKJKLCN; FNKGLFG.\\
+7) BPCLF; EPBLJ; FPJLFN.\\
+8) FQBLC; JQBLE; FNQFLJ.\\
+9) CRBLI; BRELCB.\\
+10) JPJLJRBLSLANN; JPJPJLJRCLTLANNN; JPSLT; JPTLJRD.\\
+11) AQJLU; UQJLAQSLV.\\
+12) ULWA; UPBLWB; AWDMALWDLDPU; VLWNA; VPCLWNC; VQJLWNNA; VQSLWNNNA; JPEWFGHLEFWGH; SPEWFGHLEFGWH.\\
+13) GIWIHYHN; TKCYT; ZYCWADAF.\\
+14) DPZPWNNIBRCQC.\\
+Mensaje interplanetario\\
+Por Adrián Paenza
+
+\bigskip
+
+
+Supongamos que uno quisiera mandar un mensaje al espacio de manera tal de que en el caso de que fuera interceptado por algún ser “inteligente”, éste pudiera leerlo e interpretarlo. ¿Cómo hacer para escribir algo en “ningún idioma” en particular, pero lo suficientemente explícito como para que cualquiera que pueda “razonar” lo pueda entender?
+Por otro lado, una vez superado el obstáculo del “medio” o sistema de comunicación que se va a utilizar y que suponga que “el otro” va a entender, ¿qué escribirle?, ¿qué decirle?
+
+Ahora quiero contar una historia que apareció en un diario japonés. Alicia Dickenstein, una de las mejores matemáticas argentinas de la historia y actual profesora en Exactas (UBA), volvía de un viaje por Oriente y me comentó lo que había leído en la revista El Correo de la Unesco, correspondiente al mes de enero de 1966. Me tomo el atrevimiento de reproducirlo textualmente ya que el texto circula por Internet desde hace muchísimo tiempo:
+
+“En 1960, Ivan Bell, un profesor de inglés en Tokio, oyó hablar del ‘Project Ozma’, un plan de escucha de los mensajes que por radio pudieran venirnos desde el espacio. Bell redactó entonces un mensaje interplanetario de 24 símbolos, que el diario japonés Japan Times publicó en su edición del 22 de enero de 1960, pidiendo a sus lectores que lo descifraran. El diario recibió cuatro respuestas. De las cuatro, una correspondió a una lectora norteamericana que contestó usando el mismo código que había sido utilizado para escribir el mensaje, agregando que ella vivía en Júpiter.”
+
+Acá  usted se va a encontrar con el mensaje de Ivan Bell que, como dice el artículo original, es “extraordinariamente fácil de descifrar y mucho más sencillo de lo que parece a simple vista”.
+
+Es un ejemplo muy disfrutable y original de lo que puede hacer el intelecto humano, cualquiera sea el idioma que hable: sólo se requiere tener voluntad de pensar. Acá va la lista de 14 frases. La numeración corre por cuenta mía, pero piense que cada línea es una parte del mensaje.
+}
+\end{parchment}
+
+\subsection{Ejercicios}
+ 
+\bigskip
+
+
+ 
+ 
+
+ \begin{enumerate}
+
+
+\subsubsection{Producto escalar. Norma. Distancia y ángulo entre vectores}
+
+\bigskip
+
+\item
+ 
+ Calcule  $\vec{u} \cdot \vec{v}$, siendo $\cdot$ el producto escalar, para $\vec{u}= (2,-5,-1)$ y $\vec{v} =(3, 2, -3)$.
+\begin{lstlisting}[language = python, numbers = none, escapechar = !,
+    basicstyle = \ttfamily\bfseries, linewidth = 1\linewidth] 
+import numpy as np
+a=np.array([2,-5,-1])
+b=np.array([3,2,-3])
+print (a.dot(b))
+\end{lstlisting}
+
+\bigskip
+
+\item
+ Sea $\vec{v}$= (1,-2,2,0), encuentre un vector unitario $\vec{u}$ en la misma dirección que $\vec{v}$.
+\item
+ Demuestre que $\vec{c}$ es ortogonal a  $\vec{d}$ siendo $\vec{c}$ = (4/3,-1, 2/3) y $\vec{d}$ = (5, 6,-1).
+\item
+ Determine el coseno del ángulo entre los vectores  $\vec{u}= (2,-5,-1)$ y $\vec{v}= (3, 2,-3)$, en estad\'istica este valor recibe el nombre de coeficiente de correlación. Si el valor esta cercano a $1$ o a $-1$ los datos están relacionados, de lo contrario si el valor es cercano a $0$ no existe ninguna relación entre ellos.
+\item
+ Encuentre la distancia entre $\vec{x} = (1, -1, 2)$ y $\vec{y} = (3,4,-5)$.
+
+ %\end{document}
+\bigskip
+
+\subsubsection{Sistemas de ecuaciones lineales}
+
+\bigskip
+ 
+ 
+ 
+
+ \item
+ Dado el sistema
+
+\[
+\left\{
+\begin{array}{ll}
+x_1 + x_2 + x_3 = 1 \\
+x_1 - 2x_3= 3
+\end{array}
+\right.
+\]
+
+a) Compruebe que la terna $(2t + 3, -3t -2, t)$  es solución de dicho sistema, $\forall t \in$ $\mathbb{R}$ .
+
+b) Justifique por qué este sistema tiene infinitas soluciones.
+
+c) Indique cómo se clasifican los sistemas de ecuaciones lineales.
+
+
+  
+  
+
+\item
+
+Dados los sistemas 
+
+\[
+\left\{
+\begin{array}{ll}
+x_1 - x_2 = 3\\
+2x_1 - x_2= 5
+\end{array}
+\right.
+\]
+
+y 
+
+\[
+\left\{
+\begin{array}{ll}
+x_1 - x_2 = 3 \\
+      x_2 = -1
+\end{array}
+\right.
+\]
+
+a) Compruebe que tienen el mismo conjunto solución.
+
+b) Comente la relación entre los dos sistemas.
+
+c) Mencione cuáles son las llamadas operaciones elementales.
+
+\bigskip
+
+
+\item
+
+Encuentre los valores de $b$ que hacen que el sistema
+
+
+\[
+\left\{
+\begin{array}{ll}
+x_1 + bx_2 - 2x_3 = 2 \\
+-x_1 + (b-2)x_2 + 2x_3= -2\\
+2x_1 + 2x_2 + (b-4)x_3= 3\\
+\end{array}
+\right.
+\]
+
+Tenga:
+
+\bigskip
+
+
+1) Una solución.
+
+2) Infinitas soluciones.
+
+3) Ninguna solución.
+
+4) Describa el conjunto solución para a) y b)
+
+\bigskip
+
+Nota: utilice el algoritmo de eliminación Gauss y preste atención a la notación.
+
+ \bigskip
+  
+\subsubsection{Matrices. Matrices semejantes. Matrices elementales.}
+
+ \bigskip
+ 
+ El mismo Arthur Cayley relató en 1894 que lo condujo a las matrices, el ser estas un modo conveniente de expresar las ecuaciones
+ \[
+\left\{
+\begin{array}{ll}
+x^{\prime}= ax + by \\
+y^{\prime}= cx + dx
+\end{array}
+\right.
+\]
+Simbolizando esta transformación lineal con dos variables independientes por medio de la disposición en cuadro.
+\[A= \left(\begin{array}{cc}a & b   \\ c & d 
+\end{array}
+ \right)
+ \]
+ 
+
+
+\item
+
+Halle las matrices $X$ e $Y$ sabiendo que:
+
+ \[X+Y= \left(\begin{array}{ccc}3 & 1 & -4  \\ 7 & 1 & 5
+\end{array}
+ \right)
+ \]
+  
+ \[2X - 3Y =  \left(\begin{array}{ccc}-4 & -3 & 2  \\ -6 & 2 & -5
+\end{array}
+ \right)
+ \]
+ 
+ \item
+ 
+ Si $A$ es una matriz de tamaño $m \times n$ y $B$ es una matriz de tamaño $n \times p$,
+ el producto de las matrices $A$ y $B$ es la matriz de tamaño  $m \times p$, cuyo elemento $(i,k)$  es el producto escalar de la fila $i$ de la matriz $A$ por la columna $k$ de $B$, o sea:\\
+ 
+               $(A.B)_{i,k}$ =  $ \sum_{j=1}^n  a_{ij}b_{jk}$
+
+ Dadas las matrices: $\left(\begin{array}{ccc}2 & -1 & 1  \\ 1 & 0 & 2
+\end{array}
+ \right)$,$~~\left(\begin{array}{cc}1 & 2   \\ 0 & 1 \\ 3 & 4
+\end{array}
+ \right)$,$~~\left(\begin{array}{cc}1 & 3   \\ 4 & 5
+\end{array}
+ \right)$
+ 
+ Analice en qué casos es posible calcular:  $A.B-B.A$, a ésta diferencia se la conoce como conmutador.
+ \begin{lstlisting}[language = python, numbers = none, escapechar = !,
+    basicstyle = \ttfamily\bfseries, linewidth = 1\linewidth] 
+import numpy as np
+a = np.array([[1, 0],
+              [0, 1]])
+b = np.array([[4, 1],
+              [2, 2]])
+a @ b
+\end{lstlisting}
+
+ 
+ \item
+ 
+ Dadas las matrices
+ 
+$A= \left(\begin{array}{ccccc}1 & 0 & 2 & -1  & 3   \\ 0 & 1 & 5 & 1 & 0 \\ 0 & 0 & 1 & 2 & -1 \\ 0 & 0 & 2 & 3 & 5
+\end{array}
+ \right)$ y ~~$B=\left(\begin{array}{cc}2 & 3 \\ 4 & 5 \\ 1 & 1 \\ 2 & -1 \\ 1 & 1
+\end{array}
+ \right)$
+
+ \bigskip
+ 
+ Es de destacar que se simplifica el producto $A.B$ si se utilizan submatrices.
+
+ \bigskip
+ 
+ \item
+ 
+ Calcule $A^6$ siendo:
+ 
+ \[A= \left(\begin{array}{cccc}0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0\\ 1 & 2 & 1 & -1 \\ 1 & -1 & -1 & 1
+\end{array}
+ \right)
+ \]
+
+ \bigskip
+ 
+\item
+
+Dados los tres pares de datos $(0,-1)$, $(1,1)$ y $(2,0)$, halle el polinomio de grado menor o igual que $2$: 
+$p(x)= a_0 + a_1x + a_2x^2$, que pasa por dichos pares de datos. Evalue el valor
+de $p(x)$ si $x=2/3$. Al polinomio resultante se lo denomina: Polinomio de Interpolación.
+
+\bigskip
+
+\subsubsection{Determinantes y matrices inversibles. Rango de una matriz.}
+
+\bigskip
+
+ \item
+
+¿ Es invertible la siguiente matriz?:
+
+\bigskip
+
+\[A= \left(\begin{array}{ccc}1 & -2 & 1 \\ 2 & 3 & 5\\ -1 & -5 & -4
+\end{array}
+ \right)
+ \]
+
+ \bigskip
+ 
+ Justifique de varias maneras su conclusión.
+ 
+ \item
+ 
+ Sea la matriz:\\
+ \[A= \left(\begin{array}{ccc}2 & -1 & 0 \\ 3 & b & 1\\ b & 1 & 1
+\end{array}
+ \right)
+ \]
+
+ \bigskip
+ 
+Encuentre los valores del parámetro b para que A sea invertible.
+
+\bigskip
+
+
+
+
+\item
+
+Piense una forma conveniente para calcular el valor del determinante de una matriz cuadrada y \'uselo para calcular
+el determinate de: 
+
+\[A= \left(\begin{array}{cccc}2 & 0 & 0 & 0 \\ 0 & 3 & 0 & 1\\ 0 & 3 & 2 & -2\\ 0 & -3& -1& -2
+\end{array}
+ \right)
+ \]\\
+ 
+ \item
+Encuentre el rango de la matriz en función del parámetro a:
+
+\[A= \left(\begin{array}{cccc}1 & a & -1 & 2 \\ 2 & -1 & a & 5\\ 1 & 10 & -6 & 1
+\end{array}
+ \right)
+ \]
+
+\bigskip
+
+% \subsection{Ejercicios teóricos}
+ 
+ \bigskip
+
+
+ 
+\item
+Demuestre que si
+
+1) $D = (d_{ij})$ una matriz diagonal de tamaño $n \times n$. Entonces $Det(D) = \prod_i^nd_{ii}$.
+
+2) Si $A$ es una matriz triangular del tamaño $n \times n$, entonces $Det(A)$ es producto de los elementos diagonales de $A$.
+
+3) Una matriz $A$ de tamaño $n \times n$, el $Det(tA)= t^{n}Det(A)$ siendo $t$ un escalar cualquiera.
+
+ \item
+ 
+ Demuestre el siguiente enunciado:
+ 
+ Supongamos que $\vec{u_0}$ es una solución particular del sistema de ecuaciones lineales $A\vec{x}= \vec{b}$.
+ Si $\vec{v}$ es una solución cualquiera del sistema homogéneo asociado $A\vec{x}= \vec{0}$,  entonces
+ $\vec{u_0}$ + $\vec{v}$ es solución de  $A\vec{x}= \vec{b}$.\\
+
+Aplique lo demostrado para el siguiente sistema:
+
+\[
+\left\{
+\begin{array}{ll}
+x + z + w = 4 \\
+2x + y - w = -2\\
+3x + y + z= 7\\
+\end{array}
+\right.
+\]
+
+\bigskip
+
+
+
+
+
+\end{enumerate}
+
+\bigskip
+
+\subsubsection{Autoevaluación}
+ 
+ \bigskip
+
+
+
+\subsubsection{Verdadero o Falso.}
+
+
+\bigskip
+\begin{enumerate}
+
+\item
+Si la distancia entre $\vec{u}$ y $\vec^{v}$ es igual a la distancia de $\vec{u}$ y $-\vec{v}$, entonces $\vec{u}$ y $\vec^{v}$ son ortogonales.
+
+\item
+
+Sean las matrices $A$, $B$ $\in$  $\mathbb{R}^{nxn}$ se verifica que $A$$B^t$ = $A^t$$B$.
+
+\item
+
+Consideremos la matriz $A$ $\in$ $\mathbb{R}^{3x3}$, donde
+\[A= \left(\begin{array}{ccc}x & 0 & 1\\ 0 & x & 0\\ 1 & 0 & x
+\end{array}
+ \right)
+ \]
+La ecuación Det(A) = 0, no tiene solución.
+
+\item
+
+Sean $A$, $B$ $\in$ $\mathbb{R}^{nxn}$, se verifica la relación $(A + B)^2$ =$ A^2 + 2AB + B^2$.
+
+\item
+
+Sea $A$ $\in$ $\mathbb{R}^{nxn}$ una matriz invertible se verifica que $Det(A^{-1}) = - Det(A) = 1$.
+
+\item
+
+ Sea $A\vec{x}$= $\vec^{b}$ un sistema de m ecuaciones con $n$ incógnitas, si se verifica rango de  $A$ es $n$,
+entonces el sistema es compatible determinado.
+
+\item
+
+ Sea $A \in$ $\mathbb{R}^{nxn}$  de forma tal que $A^2 = A$ , se verifica que $Det(A) = 0$ o $Det($A$) = 1$.
+
+\end{enumerate}
+
+%\cite{lay2007algebra}
+%\cite{lang1990introducción}
+
+\vspace{.5cm}
+
+
+
+
+
+%\vspace{20px}
+
+%A reference to a great cat book \cite{hay2010}, using cite.
+
+
+
+
+
+
+
+%\begin{flushright}
+%    \textit{(x marks)}
+%\end{flushright}
+
+
+

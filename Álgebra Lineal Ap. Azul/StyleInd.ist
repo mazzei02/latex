@@ -1,0 +1,4 @@
+delim_0 "\\dotfill\ "
+delim_1 "\\dotfill\ "
+headings_flag 1
+heading_prefix "\\vspace*{0.5cm}\\nopagebreak\n\\tikz\\node at (0pt,0pt) [rounded corners=5pt,draw=blue,fill=blue!50,line width=10pt,inner sep=5pt]{}{\\centering\\large\\sffamily\\bfseries\\textcolor{red}{" heading_suffix "}}};\\vspace*{0.2cm}\\nopagebreak\n"

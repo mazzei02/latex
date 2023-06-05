@@ -1,0 +1,751 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  A bright and image filled report style, currently set up here for use with ILM report 8600-219.
+%  Contains all that is required, glossaries, content management, references and good looks.
+%
+% The original template (the Legrand Orange Book Template) can be found here --> http://www.latextemplates.com/template/the-legrand-orange-book
+% Original author of the Legrand Orange Book Template:
+% Mathias Legrand (legrand.mathias@gmail.com) 
+%
+% Modifications made for ILM specific reporting
+% 
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use this
+%
+% Upload a file called FrontCover.jpg to become your new front cover - into the Pictures folder
+% Upload files called Heading1.jpg, Heading2.jpg etc to become your new chapter headers - into the Pictures folder
+% Make sure these images are the right size to fit their locations and use good quality images
+%
+% Locate the variables below and set your name, title etc.
+%
+% If you want to change text colour on the front cover, the areas required are commented below
+% If you want to modify text and border colours for your chapter headers go into the structure.tex file and replace the name of the colour (set to ) with a new colour name (find and replace ctrl+f will do this for you).
+%
+% Add all references into references.bib
+% Cite these references by using \cite{referenceName}
+%
+% Commonly used acronyms or industry specific terms should be added to the glossary
+% These terms may then be referenced in the text using \gls{termName}
+%
+% Finally put some answers in there!
+%
+% 
+% Note: This template is set up specifically for ILM reports, it can be modified for other forms of reports
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+%----------------------------------------------------------------------------------------
+%	SET THESE VARIABLES!
+%----------------------------------------------------------------------------------------
+
+\def\mytitle{\'Algebra Lineal Aplicada. } % Title of the ILM project
+%\def\ILMCode{para Astronomía} % Unique code for the ILM project
+%\def\ILMCentreName{Astronomía } % The name of the centre you're the ILM sitting at
+%\def\ILMCentreCode{123456/A} % Unique code the centre at which you're sitting the ILM
+%\def\ILMLevel{3 } % What level are you sitting with the ILM. i.e. 3, 4, 5
+%\def\reviewer{Reviewer's name} % You may not know this, if not use the centre's name
+
+%\def\author{Victoria Vampa y Lucía Rizzo Buschiazzo} % Your name.. 
+%\def\id{123456 } % Your unique identifier
+
+%\def\date{\today } % Today's date 
+
+%\renewcommand{\bibname}{Referencias}
+ 
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+%\documentclass[a4paper,11pt, twopage]{book}
+%\documentclass[11pt,fleqn,a4paper]{book} 
+%\documentclass[11pt,fleqn,a4paper]{book} 
+
+% Default font size and left-justified equations
+% para A4 desc 65 y comentar 68 y 69
+%\documentclass{book}
+%\usepackage[b5paper,twoside,layout=b5paper,showcrop]{geometry}%B5 %at A4
+
+
+\documentclass[a4paper,12pt,twopage]{book}
+\usepackage[a4paper,twoside,layout=b5paper,layouthoffset=21.5mm,layoutvoffset=24mm,showcrop]{geometry}% B5 at A4
+
+%\documentclass[b5paper,twoside]{book}
+%\usepackage[margin=2cm]{geometry}
+
+%B5 at A4
+%\usepackage{lipsum}
+%\setmainfont[Mapping=text-text]{Arial}
+\usepackage[dvipsnames]{xcolor}
+
+
+
+\usepackage{makeidx} 
+\usepackage[T1]{fontenc}
+\usepackage{tgbonum}
+
+
+
+
+
+\makeindex[options= -s indexstyle.ist]
+
+
+\input{structure2} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\makeglossaries
+
+%--------------------------------------------------------------------------
+
+
+% Glossary entries
+
+%--------------------------------------------------------------------------
+\newglossaryentry{ETN}
+{
+    name = {Example Term Name (ETN)},
+    description = {What does this term mean? Any examples of it? Further reading? References?}
+}
+
+%--------------------------------------------------------------------------
+
+% Document begins here
+
+%--------------------------------------------------------------------------
+%\vspace{29cm}
+
+\begin{document}
+
+
+%\cleardoublepage % Make sure the index starts on an odd (right side) page
+%\phantomsection
+%\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}} % Add an Index heading to the table of contents
+%\thispagestyle{empty}
+%\let\cleardoublepage\clearemptydoublepage
+%\clearpage
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+\AddToShipoutPicture*{\put(0,0){\includegraphics{Pictures/blue_space.jpg}}} % Image background
+\$centering
+\vspace*{11.3cm}
+\par\normalfont\fontsize{35}{35}\sffamily\selectfont
+
+\newpage
+\begin{center}
+    % List of Latex Colour names here: https://www.overleaf.com/learn/latex/Using_colours_in_LaTeX
+    \textbf{\textsc{\color{Blue} \mytitle}}   % Modify the name of the colour used to suit your image
+    
+  %  \textbf{\color{White}(\ILMCode)} % Modify the name of the colour used to suit your image
+    
+   \color{black}\par % Modify the name of the colour used to suit your image
+    
+    \vspace*{4 cm}
+    %\color{Apricot}\author % Modify the name of the colour used to suit your image
+\begin{Huge}
+ \textcolor{black}{Victoria Vampa}\\
+\end{Huge}
+    %(\id)\par  
+\end{center}
+
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	PARA TITULO USAR VERSALITA NEGRITA CENTRADO
+%----------------------------------------------------------------------------------------
+%\textsc{versalita}
+%------------------------------------------------------------------
+
+
+
+\chapter*{Agradecimientos}
+Estoy muy agradecida a la Facultad de Ciencias Astronómicas y Geofísicas, por avalar la redacción de este texto,  y en especial al Dr. Adrián Brunini por haberme invitado en el año 2012 a elaborar una propuesta para que la asignatura Álgebra Lineal se dicte en la facultad.
+
+
+Agradezco también a la Dra. Ana María Platzeck, por haberme brindado sus   notas de clase sobre tensores, ya que constituyeron  un aporte importante. 
+
+
+Agradezco   especialmente  a lxs estudiantes, por las   valiosas contribuciones que han realizado a mis cursos   con sus comentarios y preguntas.
+% \pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
+%\begin{flushright}
+%\textit{Dedicado a los muchos alumnos,\\
+%que a lo largo de un década\\
+%me han ayudado a ser mejor docente.}
+%\end{flushright}
+\chapterimage{Pictures/blue_space(1).jpg} % Table of contents 
+\chapter*{Prólogo}
+
+Este libro es un texto de Álgebra Lineal destinado a estudiantes de la Licenciatura en Astronomía.
+Es el resultado de enseñar durante muchos años los temas de Álgebra Lineal tanto en la Facultad de Ingeniería como en la Facultad de Ciencias Astronómicas y Geofísicas y de las contribuciones importantes que han realizado lxs  estudiantes, que han servido notablemente  al mejoramiento de mis clases.
+
+He intentado lograr un equilibrio entre los desarrollos teóricos y las técnicas, escribiéndolos en forma detallada y dando ejemplos que ilustran su utilización. Para lograr una mejor comprensión de los conceptos teóricos, he puesto énfasis en la importancia de la interpretación geométrica. 
+
+
+Quiero resaltar que la propuesta original sobre el curso ha sido  enriquecida con la contribución de la Licenciada en Astronomía Lucía Rizzo Buschiazzo,   quien incorporó  por un lado, problemas de aplicación diseñados especialmente para estudiantes de Astronomía y, por otro, una metodología novedosa promoviendo  la exposición oral de los trabajos prácticos.  
+
+Creemos que este material elaborado resulta apropiado como apoyo y guía de estudio  para el desarrollo de la asignatura Álgebra Lineal que deben cursar lxs estudiantes de la carrera Licenciatura en Astronomía  en segundo año. Consideramos  que hemos podido  conectar los conceptos teóricos del Álgebra Lineal con  aplicaciones orientadas especialmente a esa disciplina. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\newglossaryentry{latex}
+%{
+%    name=latex,
+ %   description={Is a markup language specially suited for 
+%scientific documents}
+%}
+
+
+%\newglossaryentry{formula}
+%{
+%    name=formula,
+ %   description={A mathematical expression}
+%}
+
+%\end{document}
+
+%The \Gls{latex} typesetting markup language is specially suitable 
+%for documents that include \gls{maths}. \Glspl{formula} are rendered 
+%properly an easily once one gets used to the commands.
+
+\clearpage
+
+%\printglossary
+
+%\end{document}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+\renewcommand{\contentsname}{Índice}
+\tableofcontents
+\chapterimage{Pictures/blue_space(1).jpg} % Table of contents heading image
+\vspace{12cm}
+%\pagestyle{empty} % No headers
+% \newpage
+%\thispagestyle{empty} % para que no se numere esta pagina
+ %% En esta secci'on se describe la estructura del documento de la tesis.
+%% Consulta los reglamentos de tu universidad para determinar el orden
+%% y la cantidad de secciones que debes de incluir.
+
+%% # Portada de la tesis #
+%% Mirar el archivo "titlepage.tex" para los detalles.
+
+%% # Prefacios #
+%% Por cada prefacio (p.e. agradecimientos, resumen, etc.) crear
+%% un nuevo archivo e incluirlo aqu'i.
+%% Para m'as detalles y un ejemplo mirar el archivo "gracias.tex"
+\chapter*{Introducción}
+\addcontentsline{toc}{chapter}{Introducción}
+%\pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
+\vspace{1cm}
+\section*{Introducción}
+
+ \vspace{0.35cm}
+
+
+El Álgebra Lineal es  una rama de la Matemática en la que se introducen numerosos conceptos abstractos. Es una disciplina de gran utilidad en la actualidad, en la resolución de problemas complejos y de grandes dimensiones. 
+%Es una rama de la Matemática en la que se introducen numerosos conceptos abstractos, entre ellos, por ejemplo, los espacios vectoriales y las %transformaciones lineales. 
+
+Este libro abarca los temas básicos de Álgebra Lineal   como son: espacios vectoriales, transforma-\ ciones lineales, diagonalización de una matriz y espacios vectoriales con producto interno. Si bien los temas tratados  son los mismos que aparecen en la mayoría de los textos introductorios al Álgebra Lineal, el punto de vista con que se enfoca la teoría y la ejercitación, se aparta del enfoque tradicional, y se enfatizan las aplicaciones. 
+En todos los temas se establece la conexión fundamental con la interpretación geométrica. Se presenta una gran variedad de ejemplos y se proponen, además de ejercicios, actividades de investigación especialmente diseñadas para estudiantes de Astronomía. El texto tiene además un capítulo de cálculo tensorial y otro capítulo que describe  aplicaciones en la resolución de sistemas  ecuaciones diferenciales y en la aproximación de  funciones.  
+
+
+
+
+En cuanto al origen, la palabra \textit{Álgebra}  procede del título de un  tratado  de un matemático, geógrafo y astrónomo persa conocido como Al-Juarismi. Vivió aproximadamente entre los años  780 y  850, en un tiempo de esplendor del mundo islámico. Su tratado,  el Hisab al-yabr wa’l muqabala  es un Compendio de cálculo por restauración y reducción \cite{lavanguardia}:
+\begin{parchment}[Al-yabr]
+%\lipsum[Al-yabr, restauración, la palabra del título que ha dado origen al término álgebra, es una de las operaciones básicas que ofrece %para resolver ecuaciones y que consiste en pasar los términos negativos de un lado de la ecuación como positivos al otro. Mientras que la %otra operación, la muqabala, consiste en simplificar la ecuación agrupando los términos similares.]
+{Al-yabr, restauración, la palabra del título que ha dado origen al término álgebra, es una de las operaciones básicas que ofrece para resolver ecuaciones y que consiste en pasar los términos negativos de un lado de la ecuación como positivos al otro. Mientras que la otra operación, la muqabala, consiste en simplificar la ecuación agrupando los términos similares.}
+%(Del artículo https://www.lavanguardia.com/cultura/20210520/7467794/bagdad-matematico-persa-fibonacci-algoritmo-algebra-cero-%guarismo.html).]
+\end{parchment}
+La historia del Álgebra Lineal moderna se remonta a mediados del siglo XIX con los trabajos de William Hamilton, quien introdujo el uso del término vector. Sin embargo, fue recién en la segunda mitad del siglo XX, cuando se incorporó al Álgebra Lineal   como una materia básica e introductoria en las matemáticas universitarias. 
+
+Por sus múltiples aplicaciones, el estudio del Álgebra Lineal cobra cada día más importancia.  Su teoría es extensamente usada en el análisis funcional, en el análisis vectorial y en las ecuaciones diferenciales, entre otras áreas. Cabe señalar que sus numerosas aplicaciones no se restringen al campo de las ciencias exactas, sino que se extienden también al campo de las ciencias naturales y de las ciencias sociales.
+
+%Es un texto interesante y peculiar.
+%Al final del texto se incluten soluciones completas de las autoevaluaciones.
+%Se usan notas al margen para ayudar al lector no solo a identificar los conceptos sino para   resaltar algunas propiedades de interés.
+
+
+%En este curso semestral les proponemos no sólo que incorpore los nuevos conceptos sino que también ejercite su capacidad de investigación y la de %trasmitir sus hallazgos, lo cual es igual de importante.
+
+Con la escritura de este libro he intentado  hacer interesantes y accesibles los temas de Álgebra Lineal, equilibrando los desarrollos teóricos con las técnicas que se utilizan en las aplicaciones, pretendiendo proporcionar a lxs estudiantes las habilidades algebraicas necesarias para resolver problemas. He resaltado las interpretaciones geométricas de conceptos importantes, como las transformaciones lineales y el producto interno. 
+
+El texto tiene siete capítulos, con una breve introducción al comienzo de cada uno de ellos.  Para facilitar la lectura, en todos los capítulos se ha  indicado con \tikz{\fill[orange!25] (0,0) circle (0.3cm);
+\node at (0,0) {\textcolor{blue}{\fontfamily{qcr}\selectfont{i}}};} a las  observaciones importantes. Además, para una mejor comprensión de los temas, se han incluído numerosos ejemplos. 
+
+
+%\textcolor{blue}{{\fontfamily{qcr}\selectfont{i}}} 
+En cada capítulo, las actividades propuestas contemplan  un problema de aplicación que el estudiante debe realizar y presentar y luego una serie de ejercicios  prácticos y teóricos. Al final, se presenta una autoevaluación  que le servirá al estudiante  para saber qué temas debe reforzar y cuyas respuestas se presentan al final del libro.
+
+
+En cuanto a los conocimientos previos que se requieren, en el Apéndice se presentan  una serie de ejercicios  como 'precalentamiento' que facilitarán al estudiante el abordaje del libro. 
+
+Por último y para estimular al lector el interés sobre el desarrollo histórico de los temas, se incluyen varias notas históricas dispersas  a lo largo del libro, y   semblanzas breves sobre científicos  que han realizado aportes muy valiosos al desarrollo del Álgebra Lineal. 
+
+Sobre el template 
+% The original template (the Legrand Orange Book Template) can be found here --> %http://www.latextemplates.com/template/the-legrand-orange-book
+%
+% Original author of the Legrand Orange Book Template::
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+
+Sobre la imagen de portada
+
+%Imagen en la portada de los capítulos: Nebulosa Roseta, IC 1396B, obtenida por el relevamiento fotométrico IPHAS/N, preparada por  Nick Wright.
+%\newpage
+
+% \begin{flushleft}
+
+% \end{flushleft}
+%\begin{figure}[h] %Puts the image here
+  %  \centering
+   % \includegraphics[width=0.7\textwidth]{Pictures/lineal.png} % If you want a smaller image you can change the width to [width=0.5\textwidth] or any percentage. This scales automatically, so will not become squashed or stretched 
+%\end{figure}
+
+%\listoftables %uncomment this if you want to print the list of tables at the start
+
+%\pagestyle{fancy} % Print headers again
+
+
+%----------------------------------------------------------------------------------------
+%	Glossary
+%----------------------------------------------------------------------------------------
+%\newpage
+%\chapterimage{Pictures/blue_space(1).jpg} % Table of contents heading image
+%\printglossary
+
+
+%\printglossaries
+
+%----------------------------------------------------------------------------------------
+%	First set of related questions
+%----------------------------------------------------------------------------------------
+
+\
+
+
+%--------------------------------------------------------------}Second set of related questions
+%----------------------------------------------------------------------------
+
+\chapterimage{Pictures/blue_space(1).jpg}
+%\chapter{Espacios Vectoriales}
+%El concepto de espacio vectorial generaliza las propiedades que tienen las operaciones de suma y producto por escalares  para los vectores de %$\mathbb{R}^2$ y $\mathbb{R}^3$. Abordaremos en este capítulo la estructura de espacio vectorial, objeto básico de estudio del Álgebra Lineal. A sus %elementos se los denomina vectores, independientemente de su naturaleza.
+
+\include{capitulo2.tex}
+
+
+
+
+
+
+
+%--------------------------------------------------------------
+%	More sections?
+%----------------------------------------------------------------------------
+
+\chapterimage{Pictures/blue_space(1).jpg}
+
+
+
+%Y ese conjunto junto con el producto interno forman en por sí mismo un espacio vectorial. Hemos trabajando con varios durante las prácticas:
+%Los polinomios, dado un x el resultado es un escalar, también la traza y el determinante, incluso integrales de productos de funciones o series como %en el caso de Fourier, ahora bien todos estos funcionales son justamente los elementos del espacio dual.
+%En física si un vector representa la velocidad de una partícula su funcional será el momento angular. Por lo que resultaría interesante saber cómo %encontrar éstos funcionales asociados.\\
+
+%Si estamos trabajando en una base ortonormal es fácil ver que, por ser paralelos, el producto entre el vector y su funcional será necesariamente 1, %mientras que para los demás vectores que son perpendiculares al primero el producto debe dar 0. Con esta información construimos un sistema de %ecuaciones y encontramos los coeficientes necesarios. Aquellos funcionales que anulan a ese vector están en el espacio anulador del vector. Pero el %espacio anulador es más interesante cuando se aplica a conjunto de vectores.\\
+
+%Otro ejemplo: En el espacio Euclídeo un vector puede representarse como una flecha, entonces dado un vector, el funcional asociado a ese vector y que %vive en el espacio dual será el que genera todos los vectores paralelos a ese vector. Uno puede saber el vector o el funcional y tendrá información %sobre ambos.\\
+
+%Para decirlo de una forma más simple, supóngase que un vector es el cuadro de la Monalisa, el cuadro puede dividirse entre el fondo (el paisaje) y la %forma (el rostro de Monalisa). Como puede verse fácilmente el fondo determina la forma y viceversa por eso la denominación dual. Así mismo se llama %doble dual, al dual del dual que no es otro que el espacio vectorial V, pero nos sirve porque es la forma de pasar del dual al espacio V. \\ 
+
+
+
+%Una transformación (o función o mapeo) $T:\mathbb{R}^n \rightarrow \mathbb{R}^m$ asigna a cada vector $\vec{x}$ en $\mathbb{R}^n$ %%%%5(dominio) un vector $T(\vec{x})$ en $\mathbb{R}^m$ (codominio). A su vez el mapeo dado por T del dominio al codominio se asocia a una %multiplicación matricial $T(\vec{x})=A\vec{x}$ donde A es la matriz de la transformación. Esta matriz genera dos espacios de particular %interés para el álgebra, el subespacio anulador o núcleo de T y el subespacio de la columnas de A o imagen de T. Un resultado muy %importante es que la suma de las dimensiones de estos subespacios siempre será igual a la dimensión del dominio de T.
+
+\include{capitulo3.tex}
+
+%\textcolor{red}{ Este capítulo se tratará sobre autovectores y autovalores que es una herramienta matemática muy útil a la hora de resolver diversos %problemas. En una  clase que impartió en la Universidad de Góttingen en 1905, el matemático alemán David Hilbert (1862-1943) utilizó por primera vez %el término espectro para referirse
+% al conjunto completo de los autovalores. De hecho, el término fue más que adecuado, puesto que los autovalores del operador que describe los saltos %de energía en un átomo, son literalmente los que vemos en el espectro del átomo.}
+
+
+
+
+
+ 
+\include{capitulo5.tex}
+
+%\end{document}
+\chapterimage{Pictures/blue_space(1).jpg}
+
+%\textcolor{red}{La idea básica del ajuste de mínimos cuadrados de los datos (A$\vec{v}=\vec{b}$ no tiene solución entonces encontremos una $\vec{x}$ tal que A$\vec{x}$ %esté lo más cerca posible de $\vec{b}$) se debe a K.F Gauss (e, independientemente, a A. Legendre), cuya fama despuntó en 1801 cuando utilizó el método para obtener la %trayectoria del asteroide Ceres. Cuarenta días después del que asteriode fue descubierto, desapareció detrás del Sol. Gauss predijo que Ceres aparecería 10 meses después %y precisó su ubicación. La exactitud de la predicción asombró a la comunidad científica.\\
+%El ajuste es el mismo que hace su GPS con los datos de al menos de tres satélites para determinar su ubicación aproximada sobre la tierra.\\
+%Para obtener una solución aproximada de un sistema de ecuaciones inconsistente, se necesita una idea bien definida de cercanía, para lo que se usa los conceptos de %norma, producto interno, distancia y proyección ortogonal.}
+
+\include{capitulo6.tex}
+
+\chapterimage{Pictures/blue_space(1).jpg}
+
+\include{capitulo9.tex}
+
+\chapterimage{Pictures/blue_space(1).jpg}
+
+
+\include{capitulo4.tex}
+
+\chapterimage{Pictures/blue_space(1).jpg}
+\include{capitulo7.tex}
+
+\chapterimage{Pictures/blue_space(1).jpg}
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%-------------------------------------------------------------------
+%\chapterimage{Pictures/blue_space(1).jpg} % Table of contents 
+\chapter*{Glosario}
+\addcontentsline{toc}{chapter}{Glosario}
+$C([a,b]$  espacio vectorial de las funciones continuas en $[a,b]$ 
+
+\vspace{0.2cm}
+
+$Col A$  espacio vectorial generado por los vectores columna de la matriz $A$.
+
+\vspace{0.2cm}
+
+$Det(A)$  o $ \mid A \mid$ determinante de la matriz $A$.
+
+\vspace{0.2cm}
+
+$d(\vec{x},\vec{y})=\left\|\vec{x}-\vec{y}\right\|$  distancia entre los vectores $\vec{x}$ e $\vec{y}$.
+
+\vspace{0.2cm}
+
+
+$dim(V)$ dimensión del espacio vectorial $V$.
+
+\vspace{0.2cm}
+
+$\mathbb{E}$  espacio Euclídeo
+
+\vspace{0.2cm}
+
+$E_k$ proyecciones tales que $Im(E_i)=N(T- \lambda_i I)^{r_i}$.
+
+\vspace{0.2cm}
+
+$\bold E_{\lambda_i}$  espacio propio correspondiente a $\lambda_i$.
+
+\vspace{0.2cm}
+
+ $f ^{*}$ transformación adjunta de una transformación lineal $f$. 
+ 
+\vspace{0.2cm}
+
+$Fil A$  espacio vectorial generado por los vectores fila de la matriz $A$.
+
+\vspace{0.2cm}
+
+$\mathbf{A}(\vec{x},\vec{y})$  forma bilineal
+
+\vspace{0.2cm}
+
+$Im(T)$  imagen de la transformación lineal $T$.
+
+\vspace{0.2cm}
+
+$\left\langle \vec{z}\right\rangle $ subespacio generado por el vector $\vec{z}$
+
+\vspace{0.2cm}
+
+$\bold{L}(S)$  subespacio vectorial de $V$ generado por $S$. 
+\vspace{0.2cm}
+
+$L(V)$    espacio vectorial de transformaciones lineales de $V$ en $V$ (endomorfismos).
+\vspace{0.2cm}
+
+$L(V,W) $  espacio vectorial de transformaciones lineales de $V$ en $W$.
+\vspace{0.2cm}
+
+$m_T$  polinomio minimal.
+\vspace{0.2cm}
+
+$N(T)$  núcleo de la transformación lineal $T$.
+\vspace{0.2cm}
+
+$Nul(A)$  espacio nulo de la matriz $A$.
+\vspace{0.2cm}
+
+$ P_{K} \left[ x \right]$ polinomios en  $x$, con coeficientes en $K$.
+\vspace{0.2cm}
+
+$ P^{(n)}_K\left[x\right]$ polinomios en  $x$, con coeficientes en $K$ de grado $\le n$.
+\vspace{0.2cm}
+
+$\mathbf{P}_T(\lambda)$  polinomio característico de $T$.
+\vspace{0.2cm}
+
+$P_{B,B ^{\prime}}$  matriz del cambio de base de  $B ^{\prime}$  a $B$.
+\vspace{0.2cm}
+
+
+$P_S(\vec{v})$ proyección ortogonal de $\vec{v}$ sobre el subespacio $S$. 
+\vspace{0.2cm}
+
+$\phi(\vec{x},\vec{y})=(\vec{x},\vec{y})$  producto interno
+\vspace{0.2cm}
+
+$r(T)$  rango de la matriz $T$.
+\vspace{0.2cm}
+
+$S=\left\langle \vec{v}\right\rangle$   subespacio generado por el vector $\vec{v}$.
+\vspace{0.2cm}
+
+$S^{\perp}$ complemento ortogonal de $S$  en un espacio vectorial   ($V$ con producto interno).
+\vspace{0.2cm}
+
+
+$Tr(A)$  traza de la matriz $A$
+
+\vspace{0.2cm}
+
+$V^*$  espacio dual de $V$.
+
+
+\addcontentsline{toc}{chapter}{Índice alfabético} % para que lo añada al índice de contenidos
+\printindex % Output the index
+%----------------------------------------------------------------------------------------
+%	References
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+%\chapterimage{Pictures/blue_space(1).jpg}
+
+\chapter*{Sobre la autora}
+\addcontentsline{toc}{chapter}{Sobre la autora}
+\begin{parchment}[Victoria Vampa, autora] {Nació en La Plata, Argentina, en 1960. Obtuvo la Licenciatura en Matemática Aplicada en la Facultad de Ciencias Exactas, UNLP,  la Maestría en Simulación Numérica y Control en la Facultad de Ingeniería de la Universidad de Buenos Aires y luego su Doctorado en Matemática en la Facultad de Ciencias Exactas de la UNLP. 
+Su área de investigación es la matemática aplicada. Trabajó en la resolución numérica de ecuaciones diferenciales mediante el método de elementos finitos; en particular, con las ecuaciones de elasticidad, en problemas que describen el comportamiento membranal de estructuras laminares. Luego estudió el análisis wavelet y desarrolló aportes en la solución de esos problemas. Trabajó también en el uso del análisis multirresolución wavelet proponiendo métodos eficientes para resolver problemas de contorno. 
+Ha participado  de una gran cantidad de congresos y reuniones científicas, y ha publicado numerosos trabajos. Los trabajos considerados de mayor relevancia son:
+
+\bigskip
+
+\begin{itemize}
+\item
+\textit{Mejoras en el comportamiento membranal del elemento de lámina MITC4}. (ISBN 978-3-8484-6763-1), Editorial Académica Española, 2012. 
+
+https://www.eae-publishing.com/catalog/details/store/es/book
+
+/978-3-8484-6763-1/mejoras-en-el-comportamiento-membranal-
+
+del-elemento-de-lámina-mitc4
+\newline
+\item
+\textit{A new refinement Wavelet-Galerkin method in a spline local multiresolution analysis scheme for boundary value problems}. 
+Autores: V. Vampa, M. T. Martín y E. Serrano, Journal on Wavelets, Multiresolution and Information Processing, IJWMIP-120605, Vol. 11, 2, 1350015-1-19, 2013.
+
+https://doi.org/10.1142/S021969131350015X
+
+
+\item
+\textit{Entropy-Based Informational Study of the COVID-19 series of data}. Autores: A. M. Kowalski, M. Portesi, V. Vampa, M. Losada and F. Holik. Mathematics 2022, 10, 4590.
+
+https://doi.org/10.3390/math10234590
+
+\end{itemize}
+
+\bigskip
+
+
+Actualmente es Profesora Adjunta Dedicación Exclusiva en la Facultad de Ingeniería, UNLP, en la cátedra Matemática C. Coordina la Unidad de Investigación, Desarrollo, Extensión y Transferencia, UIDET Matemática Aplicada del Departamento de Ciencias Básicas,  dedicada al diseño de métodos numéricos para su aplicación en la resolución de ecuaciones diferenciales y en el análisis de series temporales, con especial énfasis en desarrollos sobre aspectos teóricos y aplicados de la Transformada Wavelet. Además, es profesora del curso de posgrado Introducción al Método de Elementos Finitos y directora de proyectos acreditados por la UNLP sobre la aplicación de la transformada wavelet en el estudio de sistemas dinámicos.  
+En la Facultad de Ciencias Astronómicas y Geofísicas, UNLP, es Profesora Adjunta Dedicación Simple, en la cátedra Álgebra Lineal, cargo en el que se  desempeña  desde el año 2013.
+
+
+Otras aficiones de la autora, además de la docencia y la matemática, son el ciclismo, la música, la repostería y la fotografía.}
+\end{parchment}
+
+
+\newpage
+
+
+
+
+Imagen en la portada de los capítulos: Nebulosa Roseta, IC 1396B, obtenida por el relevamiento fotométrico IPHAS/N, preparada por  Nick Wright.
+
+
+
+%\chapterimage{Heading4.jpg} % Chapter heading image
+%\renewcommand{\bibliography}{Referencias}
+%\chapter*{Referencias}
+%\include{references.bib}
+\renewcommand\bibname{Referencias}
+\addcontentsline{toc}{chapter}{Referencias}
+\bibliographystyle{plain} % Change this to IEEE or Harvard etc.
+\bibliography{references}
+%\chapterimage{Heading4.jpg} % Chapter heading image
+%\include{referencias.tex}
+
+%\chapterimage{Pictures/blue_space(1).jpg} % Table of contents 
+\chapter*{Respuestas a las autoevaluaciones}
+\addcontentsline{toc}{chapter}{Respuestas a las autoevaluaciones}
+
+\noindent 
+%\textbf{Apéndice}: $1.$ V, $2.$ F, $3.$ F, $4.$ F, $5.$ F, $6.$ F, %$7.$ V
+
+\bigskip
+
+%\textbf{\ref{Auto1}}: $1.$ V, $2.$ F, $3.$ F, $4.$ V, $5.$ V, $ %6.$ F, $7.$ V, $8.$ V, $9.$ F
+
+\bigskip
+
+\textbf{\ref{Auto2}}: $1.$ V, $2.$ F, $3.$ V, $4.$ F, $5.$ V, $ 6.$ V, $7.$ V, $8.$ V, $9.$ V, $10.$ V, $11.$ V 
+
+\bigskip
+
+\textbf{\ref{Auto3}}: $1.$ V, $2.$ V, $3.$ V, $4.$ F, $5.$ F, $6.$ V, $7.$ F, $ 8.$ V, $9.$ V, $10.$ V, $11.$ V, 
+
+$12.$ F, $13.$F, $14.$ V, $ 15.$F, $16.$F
+
+\bigskip
+
+\textbf{\ref{Auto4}}: $1.$ V, $2.$ V, $3.$ V, $4.$ V, $5.$ V, $6.$ V, $7.$ V, $ 8.$ V, $9.$ V, $10.$ V, $11.$ V,  
+
+
+ $12.$ V, $13.$ F, $14.$ V, $ 15.$ F, $ 16.$ V, $ 17.$ V, $18.$ V, $19.$ V
+
+\bigskip
+
+\textbf{\ref{Auto5}}: $1.$ V, $2.$ F, $3.$ F, $4.$ F, $5$ F
+
+\bigskip
+
+\textbf{\ref{Auto6}}: $1.$ V, $2.$ F, $3.$ V, $4.$ F, $5.$ V, $6.$ V, $7.$ F, $8.$ V
+
+\end{document}
+
+\vspace{0.5cm} % Adds some vertical whitespace, easier to read
+
+\begin{itemize}
+    \item Point 1
+    \item Point 2
+    \item Point 3
+\end{itemize}
+
+
+
+\vspace{0.5cm} % Adds some vertical whitespace, easier to read
+
+\begin{enumerate}
+    \item Point 1
+    \item Point 2
+    \item Point 3 \cite{catsProtection}
+\end{enumerate}
+
+{\bf Trabajo de investigación}\\
+\vspace{0.35cm}
+
+
+
+Para pasar de coordenadas celestes a coordenadas horizontales, es necesario hacer dos rotaciones,
+a saber:
+
+\vspace{0.25cm}
+
+\noindent $\overrightarrow{r_{el}}$= $R_z$(TSL)*$\overrightarrow{r_{ec}}$\\
+$\overrightarrow{r_{h}}$= $R_y$(90-$\varphi$)*$\overrightarrow{r_{el}}$\\
+
+Donde usaremos TSL= tiempo siderio local= 18:31:31 y $\varphi$= $-$34º 50'  La PLata.\\
+
+El vector de las coordenadas ecuatoriales celestes se escribe como:\\
+
+$\overrightarrow{r_{ec}}=\left(\begin{array}{c} cos(\delta)cos(\alpha)\\cos(\delta)sen(\alpha) \\ sen(\delta)
+\end{array}
+ \right)$
+
+ \vspace{0.25cm}
+
+El vector de las coordenadas horizontales se escribe como:\\
+
+$\overrightarrow{r_{h}}=\left(\begin{array}{c} cos(h)cos(A)\\-cos(h)sen(A) \\ sen(h)
+\end{array}
+ \right)$
+
+ \vspace{0.25cm}
+
+donde h=$sen^{-1}(z)$ y A=$tan^{-1}(-y/x)$\\
+ 
+ Amplie la tabla 1 con las coordenadas horizontales para cada cúmulo.\\
+
+
+\begin{table}[!hbt]
+\caption{\label{t7}En ésta tabla están las coordenadas celestes de 13 cúmulos abiertos.}
+\centering
+\begin{tabular}{lcc}
+\hline\hline
+Cúmulo&RA(J2000)&Dec(J2000)\\
+\hline
+NGC6192 &16:40:16.40 & $-$43:30:31.0\\
+NGC6242 & 16:55:32.38& $-$39:28:02.0\\
+NGC6322&17:18:25.13  & $-$42:56:03.3\\
+NGC6704 &18:50:42.00 & $-$05:12:42.5\\
+NGC6737 &19:02:16.30 & $-$18:32:56.5\\
+Rup102 & 12:13:32.95& $-$62:43:18.7\\
+Rup166 & 13:25:38.14& $-$63:27:54.6\\
+SLS4565& 18:01:59.55&$-$23:41:06.3\\
+Lynga14& 16:55:03.40&$-$45:14:09.1\\
+Trumpler22& 14:31:03.33&$-$61:09:57.0\\
+Trumpler24& 16:56:11.14&$-$40:40:01.1\\
+Dominici11& 18:57:36.31&$-$10:23:39.9\\
+Dominici12& 18:51:24.93&$-$13:18:50.2\\
+\hline
+\end{tabular}
+\end{table}
+
+
+Nota: No tenga en cuenta la precesión.\\
+ 
+Recomendación: Haga un programa para hacer los cálculos.\\
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+
+\noindent \textit{First release, \date} % Printing/edition date
+\clearpage
+
+\renewcommand{\bibname}{References} % Adds in the link to your references
+En el primer capítulo se abordan conceptos básicos como la estructura de espacio vectorial, la dependencia e independencia lineal, sistemas de generadores y base y dimensión de un espacio vectorial y la noción de subespacio. Se ejemplifica tomando como base los casos particulares del plano y del espacio tridimensional  y la resolución  de sistemas de ecuaciones lineales. El segundo capítulo se dedica a las funciones entre espacios vectoriales que respetan la estructura de espacio vectorial y su estrecha relación con las matrices, ya que al poder asociar a cada transformación lineal una matriz y recíprocamente, de tal forma que  las transformaciones lineales y las matrices son, en cierta manera,   lo mismo. Se introducen los conceptos de núcleo e imagen de una transformación lineal. Se relaciona con los espacios asociados a una matriz en la resolución de sistemas lineales.  Se analiza el efecto geométrico de algunas transformaciones lineales en el plano, el teorema de la dimensión y también el espacio dual de un espacio vectorial.
+
+Este libro ha surgido  de la experiencia y de la gran cantidad de material que hemos podido recopilar desde que comenzamos a impartir las clases del curso en el año 2013. Hemos considerado  de gran importancia a la interpretación geométrica de los temas. De ahí que, nuestro trabajo pudo conectar los conceptos teóricos del Álgebra Lineal con las aplicaciones orientadas especialmente a los estudiantes de Astronomía. 
+
+El material ha sido escrito con el objetivo de servir de apoyo y guía de estudio para el desarrollo de la asignatura Álgebra Lineal que deben cursar los estudiantes de la carrera licenciatura en Astronomía. 
+
+Se ha procurado observar cada concepto desde un punto de vista geométrico. Es decir,  que  los resultados básicos del Álgebra Lineal, se desarrollan  haciendo énfasis en las interpretaciones geométricas. 
+
+. La propuesta es que no solo incorpore los conceptos, sino que además ejercite su capacidad de investigación y la de transmitir sus logros. En cada capítulo se plantea un tema de investigación que consiste en resolver un  problema de aplicación. El estudiante deberá realizarlo y exponerlo en forma oral para su aprobación. Hay además, en cada capítulo, ejercicios tanto prácticos como  teóricos que harán acompañados y orientados por los docentes y que contribuirán a una mejor comprensión de los conceptos.
+
+%Consideramos que la propuesta de Libro de Cátedra redundará en un gran beneficio para ellos, puesto que no existe en la actualidad %bibliografía que comprenda de forma conjunta la suma de los conceptos teóricos que abarca la materia y las aplicaciones que necesitan como %futuros astrónomos.
